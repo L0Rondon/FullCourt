@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav-menu">
+            <div class="logo">FullCourt</div>
+            <div class="hamburguer">☰</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="roupas.html">Roupas</a>
+                <a href="basquete.html">Tenis Basquete</a>
+                <a href="casual.html">Tenis Casual</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="login.html">Login</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <br>
+        <br>
+        <div class="container-cadastro">
+            <h2 class="form-title">Cadastro de Cliente</h2>
+            <form action="/cadastrar_cliente" method="POST">
+                <div class="input-container">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required>
+                    <br>
+
+                    <label for="email">E-mail:</label>
+                    <br>
+                    <input type="email" id="email" name="email"   required>
+
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                    <br>
+
+                    <label for="nascimento">Data de Nascimento:</label>
+                    <input type="date" id="nascimento" name="nascimento"   required>
+
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" name="endereco" required>
+                </div>
+
+                <button type="submit" class="submit">Cadastrar</button>
+            </form>  
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 FullCourt. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="assets/js/hamburguer.js "></script>
+</body>
+
+</html>
