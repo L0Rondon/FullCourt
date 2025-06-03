@@ -25,29 +25,75 @@
     <br>
     <br>
     <main>
-        <br>
-        <br>
-            <div class="container-login">
-                <form class="form">
-                    <p class="form-title">Faça login</p>
-                    <div class="input-container">
-                        <input type="email" placeholder="Digite seu email">
-                        <span>
-                        </span>
-                    </div>
-                    <div class="input-container">
-                        <input type="password" placeholder="Digite a senha">
-                    </div>
-                    <button type="submit" class="submit">Entrar</button>
-    
-                    <p class="signup-link">
-                        Não possui uma conta?
-                        <a href="cadastro.html">Cadastre-se</a>
-                    </p>
-                </form>
+        <div class="auth-container">
+            <!-- Abas de navegação -->
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login">Login</button>
+                <button class="auth-tab" data-tab="register">Cadastrar</button>
+                <button class="auth-tab" data-tab="recover">Recuperar Senha</button>
             </div>
-            <br>
-            <br>
+           
+            <!-- Formulário de Login -->
+            <form id="login-form" class="auth-form active">
+                <div class="form-group">
+                    <label for="login-email">E-mail</label>
+                    <input type="email" id="email" required>
+                </div>
+               
+                <div class="form-group">
+                    <label for="login-password">Senha</label>
+                    <input type="password" id="senha" required>
+                </div>
+               
+                <button type="submit" id="logar" class="auth-btn">Entrar</button>
+               
+                <div class="auth-links">
+                    <a href="#" data-tab="recover">Esqueceu sua senha?</a>
+                </div>
+            </form>
+           
+            <!-- Formulário de Cadastro -->
+            <form id="register-form" class="auth-form">
+                <div class="form-group">
+                    <label for="register-name">Nome Completo</label>
+                    <input type="text" id="register-name" required>
+                </div>
+               
+                <div class="form-group">
+                    <label for="register-email">E-mail</label>
+                    <input type="email" id="register-email" required>
+                </div>
+               
+                <div class="form-group">
+                    <label for="register-password">Senha</label>
+                    <input type="password" id="register-password" required>
+                </div>
+               
+                <div class="form-group">
+                    <label for="register-confirm">Confirmar Senha</label>
+                    <input type="password" id="register-confirm" required>
+                </div>
+               
+                <button type="submit" id="CadastrarUsuario" class="auth-btn">Cadastrar</button>
+            </form>
+           
+            <!-- Formulário de Recuperação de Senha -->
+            <form id="recover-form" class="auth-form">
+                <div class="form-group">
+                    <label for="recover-email">E-mail cadastrado</label>
+                    <input type="email" id="recover-email" required>
+                </div>
+               
+                <p style="margin-bottom: 20px;">Enviaremos um link para redefinir sua senha.</p>
+               
+                <button type="submit" class="auth-btn">Enviar Link</button>
+               
+                <div class="auth-links">
+                    <a href="#" data-tab="login">Lembrou sua senha? Faça login</a>
+                </div>
+            </form>
+        </div>
+
     </main>
 
     <footer>
@@ -56,5 +102,6 @@
         </div>
     </footer>
     <script src="assets/js/hamburguer.js"></script>
+    <script src="assets/js/login.js"></script>
 </body>
 </html>
